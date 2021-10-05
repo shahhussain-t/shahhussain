@@ -38,10 +38,24 @@ body {
   display: none;
 }
 
-.hum_div .humberger {
-  width: 50px;
+.hum_div .humberger{
+ width: 50px;
+ appearance: none;
+ background: none;
+ border: none;
 }
-.hum_div:hover .humberger {
+.hum_div .humberger span{
+  
+  width: 50px;
+  background: white;
+  height: 2px;
+  display: block;
+  
+}
+
+
+
+.hum_div:hover .humberger span{
   width: 40px;
 }
 
@@ -53,6 +67,23 @@ body {
   left: 4px;
   background: white;
   cursor: pointer;
+}
+
+.hum_div .humberger.arrow span{
+  
+      
+  opacity: 0;
+  
+}
+.hum_div .humberger.arrow::after{
+  
+  transform: translate(2px,2px) rotate(-45deg);
+  
+}
+.hum_div .humberger.arrow::before{
+  
+  transform: translate(2px,1px) rotate(45deg);
+  
 }
 
 .hum_div .humberger::after {

@@ -1,5 +1,6 @@
 const button = document.querySelector(".hum_div");
 const navbar = document.querySelector(".navBar");
+const tole = document.querySelector(".humberger");
 
 let btn = false;
 button.addEventListener("click", () => {
@@ -16,4 +17,6 @@ button.addEventListener("click", () => {
     navbar.classList.replace("close", "open");
     btn = true;
   }
+  
+  tole.classList.toggle("arrow")
 });
