@@ -385,6 +385,12 @@ overflow: hidden;
   }
   .Header .container .logo {
   }
+  
+  .hero_head {
+    
+    clip-path: polygon(69% 82%, 100% 90%, 100% 0, 0 0, 0 92%);
+    
+  }
 }
 
 /* 1300px */
