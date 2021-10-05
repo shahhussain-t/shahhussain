@@ -1,19 +1,19 @@
-const button = document.querySelector(".bar_con");
-const menu = document.querySelector(".menu");
-console.log(menu);
+const button = document.querySelector(".hum_div");
+const navbar = document.querySelector(".navBar");
 
 let btn = false;
 button.addEventListener("click", () => {
   if (btn) {
-    menu.classList.replace("unactive", "active");
+    navbar.classList.replace("open", "close");
+
     setTimeout(() => {
-      menu.style.display = "none";
-    }, 2000);
+      navbar.classList.replace("close", "ab");
+    }, 1000);
+
     btn = false;
   } else {
-    menu.style.display = "block";
-
-    menu.classList.replace("active", "unactive");
+    navbar.classList.replace("ab", "open");
+    navbar.classList.replace("close", "open");
     btn = true;
   }
 });
