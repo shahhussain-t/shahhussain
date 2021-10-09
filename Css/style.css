@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 *,
 *::after,
 *::before {
@@ -427,6 +427,40 @@ height: 250px;
   
   
 }
+
+
+/* contact start*/
+
+.contact{
+  
+  display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-top: 20vh;  
+}
+.contact .container{
+  
+  display: flex;
+  margin-top: 20px;
+  padding: 20px;
+  justify-content: space-between;
+  
+}
+
+.contact .contact_left .address{
+  
+  display: flex;
+  
+}
+.contact .contact_left .address i{
+  
+  font-size: ;
+  
+}
+
+/* contact end */
+
 /* RESPONISVENESE */
 @media (max-width:1300px) {
  
