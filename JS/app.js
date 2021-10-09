@@ -1,11 +1,12 @@
-const button = document.querySelector(".hum_div");
+const menuBtn = document.querySelector(".menu-btn");
 const navbar = document.querySelector(".navBar");
-const tole = document.querySelector(".humberger");
+const tole = document.querySelector(".menu-btn-burger");
 
 let btn = false;
-button.addEventListener("click", () => {
+menuBtn.addEventListener("click", () => {
   if (btn) {
     navbar.classList.replace("open", "close");
+    menuBtn.classList.remove('open')
 
     setTimeout(() => {
       navbar.classList.replace("close", "ab");
@@ -15,8 +16,9 @@ button.addEventListener("click", () => {
   } else {
     navbar.classList.replace("ab", "open");
     navbar.classList.replace("close", "open");
+    menuBtn.classList.add('open')
     btn = true;
   }
   
-  tole.classList.toggle("arrow")
+  tole.classList.toggle("open")
 });

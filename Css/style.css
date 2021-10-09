@@ -23,86 +23,71 @@ body {
   height: 100vh;
   overflow: hidden;
 }
-.hum_div {
+
+.menu-btn{
+  
   position: relative;
-  width: 60px;
-  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  width: 70px;
+  height:50px;
   cursor: pointer;
-  box-shadow: 0px 0px 2px var(--color-yellow);
-  transition: 1s ease;
+  transition:all .5s ease-in-out;
   z-index: 100;
+
   display: none;
 }
-
-.hum_div .humberger{
- width: 50px;
- appearance: none;
- background: none;
- border: none;
-}
-.hum_div .humberger span{
+.menu-btn-burger{
   
   width: 50px;
-  background: white;
-  height: 2px;
-  display: block;
+  height: 6px;
+  background: #ffffff;
+  border-radius: 5px;
+  transition: all .5s ease-in-out;
+}
+.menu-btn-burger::before,
+.menu-btn-burger::after
+{
   
-}
-
-
-
-.hum_div:hover .humberger span{
-  width: 40px;
-}
-
-.hum_div .humberger::after,
-.hum_div .humberger::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 50px;
-  left: 4px;
-  background: white;
-  cursor: pointer;
-}
-
-.hum_div .humberger.arrow span{
-  
-      
-  opacity: 0;
+  height: 6px;
+  background: #ffffff;
+  border-radius: 5px;
+  transition: all .5s ease-in-out;
   
 }
-.hum_div .humberger.arrow::after{
+.menu-btn-burger::before{
   
-  transform: translate(2px,2px) rotate(-45deg);
+  transform: translateY(-16px);
   
 }
-.hum_div .humberger.arrow::before{
+.menu-btn-burger::after{
   
-  transform: translate(2px,1px) rotate(45deg);
+  transform: translateY(16px);
   
 }
 
-.hum_div .humberger::after {
-  height: 2px;
-  transform: translateY(10px);
+.menu-btn.open .menu-btn-burger{
+  
+  
+  transform: translateX(-50px);
+  background: transparent;
 }
-.hum_div:hover .humberger::after {
-  width: 45px;
+.menu-btn.open .menu-btn-burger::before{
+  
+  transform: rotate(45deg) translate(35px,-35px);
+  
+  
 }
-.hum_div:hover .humberger::before {
-  left: 8px;
-  width: 45px;
+.menu-btn.open .menu-btn-burger::after{
+  
+  transform: rotate(-45deg) translate(35px,35px);
+  
+  
 }
-
-.hum_div .humberger::before {
-  height: 2px;
-  transform: translateY(-12px);
-}
-
 .anchor {
   text-decoration: none;
   color: var(--color-yellow);
@@ -307,7 +292,7 @@ body {
   .hero .container .right .info p:nth-child(2) {
     font-size: 0.9rem;
   }
-  .hum_div {
+  .menu-btn {
     display: flex;
   }
 
@@ -321,11 +306,11 @@ body {
   }
 
   .Header .navBar.open {
-    animation: circle1 1s;
+    animation: circle1 1s linear;
   }
 
   .Header .navBar.close {
-    animation: reverse1 1s;
+    animation: reverse1 1s linear;
     clip-path: circle(5% at 99% 1%);
   }
   .ab {
