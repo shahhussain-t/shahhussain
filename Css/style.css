@@ -279,7 +279,8 @@ padding-top: 10%;
 /* project section start */
 .projects{
   
-  height: 100vh;
+  min-height: 100vh;
+
   
 }
 .projects .container{
@@ -288,11 +289,11 @@ padding-top: 10%;
  flex-direction: column;
  align-items: center;
 }
-.projects .projects_heading{
+ .section_heading{
   
   position: relative;
 }
-.projects .projects_heading::after{
+.section_heading::after{
  content: '';
 background:var(--color-yellow);
 position: absolute;
@@ -301,15 +302,15 @@ position: absolute;
   border-radius: 50px;
  
 }
-.projects .projects_heading h2{
+.projects .section_heading h2{
   
   font-size: 3rem;
 }
 
 .projects .projects_wrapper{
   
-  background: rgb(0, 0, 0);
-  width: 100%;
+  background: rgb(233, 228, 228);
+  min-width: 50%;
   margin-top: 50PX;  
   padding:20px;
   display: flex;
@@ -324,7 +325,7 @@ flex-direction: column;
 padding: 20px;
 text-align: center;
 align-items: center;
-background: rgba(189, 173, 173, 0.274);
+background: rgba(14, 12, 12, 0.274);
 margin-bottom: 15px;
 margin-top: 15px;
 margin-right: 15px;
@@ -342,7 +343,7 @@ border-radius: 10px;
   height: 200px;
   min-width: 300px;
   margin-bottom: 10px;
-  background: rgba(224, 49, 49, 0.267);
+  background: rgba(190, 13, 13, 0.938);
   box-sizing: border-box;
 
 }
@@ -362,18 +363,105 @@ border-radius: 10px;
 }
 /* project section end */
 /* ........................................ */
+/* about start */
+
+ .about{
+  
+
+  margin-top: 60px;
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+ 
+.about .container{
+  display: flex;
+  flex-wrap: wrap;
+padding: 20px;
+  align-items: center;
+  margin-top: 40px;
+  justify-content: center;
+
+  
+}
+
+.about .section_heading h2{
+  text-transform: capitalize;
+  font-size: 3rem;
+  margin-bottom: -10px;
+}
+
+.about .about_left{
+ position: relative;
+width: 400px;
+height: 280px;
+display: flex;
+justify-content: center;
+left: 20px;
+margin-bottom: 60px;
+margin-left: 50px;
+  
+}
+.about .about_left img{
+  position: relative;
+  
+  width: 50%;
+  margin-top: 30px;
+  /* border-radius: 5px; */
+  box-shadow: -40px -30px  rgba(32, 27, 27, 0.199);
+}
+.about .about_right{
+  
+
+width: 30%;
+height: 250px;
+
+  background: rgb(255, 255, 255);
+}
+.about .about_right h4{
+  color: var(--color-yellow);
+  font-size: 2rem;
+  
+  
+}
 /* RESPONISVENESE */
 @media (max-width:1300px) {
+ 
   .projects .projects_wrapper{
     
     justify-content: center;
     min-width: 60%;
+  
     
   }
  
   
 }
 @media (max-width: 1024px) {
+
+.about .container{
+  justify-content: space-between;
+  width: 100%;
+  
+}
+  .about .about_left{
+    
+    width: 50%;
+
+  }
+  .about .about_right{
+    width: 40%;
+    
+    
+  }
+  
+  .about .container{
+    justify-content: center;
+    
+  }
   .hero .container .right .info p:nth-child(1) {
     font-size: 2rem;
   }
@@ -386,13 +474,7 @@ border-radius: 10px;
 }
 
 @media (max-width: 780px) {
-  /* .projects .projects_wrapper .project .project_div{
-    
-    
-    min-width: 250px;
-    
-    
-  } */
+
   
   .hero .container .right .info p:nth-child(1) {
     font-size: 1.7rem;
@@ -477,15 +559,30 @@ border-radius: 10px;
     transform: translate(-50%, 50%);
     animation: display1 5s;
   }
+  .about .about_right{
+    width: 40%;
+      
+      
+    }
+    .about .about_left img{
+      
+      width: 80%;
+      
+    }
+  
+  .about .container{
+    
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 620px) {
   
-  .projects .projects_heading h2{
+  .projects .section_heading h2{
   
     font-size: 2.2rem;
   }
- 
   
    .projects .projects_wrapper .project .project_div{
     
@@ -517,8 +614,37 @@ border-radius: 10px;
     clip-path: polygon(69% 82%, 100% 90%, 100% 0, 0 0, 0 92%);
   }
   
+  .about .about_right{
+  width: 55%;
+    
+    
+  }
+  
+  .about .about_left{
+    width: 70%;
+    
+  }
+  
+  .about .about_left img{
+    
+    object-fit: cover;
+    
+  }
+  
 }
 
+@media (max-width:470px){
+  .about .about_left img{
+    
+    width: 100%;
+    
+  }
+  .about .about_right{
+    
+    width: 90%;
+  }
+  
+}
 /* common screen size */
 /* 1300px */
 /* 680 */
