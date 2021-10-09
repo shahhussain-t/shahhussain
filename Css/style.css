@@ -424,11 +424,11 @@ border-radius: 10px;
   }
 
   .Header .navBar.open {
-    animation: circle1 1s linear;
+    animation: circle1 .5s linear;
   }
 
   .Header .navBar.close {
-    animation: reverse1 1s linear;
+    animation: reverse1 .5s linear;
     clip-path: circle(5% at 99% 1%);
   }
   .ab {
