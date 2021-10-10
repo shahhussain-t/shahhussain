@@ -865,13 +865,21 @@ footer .quikLinks ul li a:hover {
 
   .contact {
     width: 100%;
+   
   }
 
+.contact .container{
+
+
+}
   .contact .contact_left {
-    margin-right: 70px;
+     
+  width: 300px;
+  margin-left: -40px;
+  
   }
   .contact .contact_right {
-    width: 130%;
+    width: 125%;
   }
   .about .about_right{
     overflow-x: hidden;
