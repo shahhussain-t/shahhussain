@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
 
     <link rel="stylesheet" href="./Css/style.css" />
     <script src="./JS/app.js" defer></script>
@@ -17,32 +22,37 @@
     <header class="Header">
       <div class="container">
         <div class="logo">
-          <p><a href="#" class="anchor">SHAH HUSSAIN</a></p>
+          <p><a href="#hero" class="anchor">SHAH HUSSAIN</a></p>
         </div>
         <div class="menu-btn">
           <div class="menu-btn-burger"></div>
         </div>
 
-        <nav class="navBar ab">
+        <nav class="navBar">
           <ul class="list">
-            <li class="active"><a href="#">HOME</a></li>
-            <li><a href="#">ABOUT ME</a></li>
-            <li><a href="#">MY WORK</a></li>
+            <li class="active" id="home"><a href="#hero">HOME</a></li>
+            <li id="mywork"><a href="#project">MY WORK</a></li>
+            <li id="aboutMe"><a href="#about">ABOUT ME</a></li>
           </ul>
+
           <div class="Header_btn hello">
-            <button type="button" class="btn">CONTACT ME</button>
+            <a href="#contact" id="contactMe">
+              <button type="button" class="btn">CONTACT ME</button>
+            </a>
           </div>
         </nav>
 
         <div class="Header_btn">
-          <button type="button" class="btn">CONTACT ME</button>
+          <a class="anchor" href="#contact">
+            <button type="button" class="btn">CONTACT ME</button>
+          </a>
         </div>
       </div>
     </header>
 
     <!-- header End -->
     <!-- hero start -->
-    <section class="hero hero_head">
+    <section class="hero hero_head" id="hero">
       <div class="container">
         <div class="left">
           <div class="hero_img">
@@ -65,14 +75,14 @@
 
     <!-- project section start -->
 
-    <section class="projects">
-      <div class="container">
+    <section class="projects" id="project">
+      <div class="container slide-up">
         <div class="section_heading">
           <h2>My projects</h2>
         </div>
 
         <div class="projects_wrapper">
-          <div class="project">
+          <div class="fade-in project">
             <h3>project 1</h3>
             <div class="project_div"></div>
             <div class="btn">
@@ -80,7 +90,7 @@
             </div>
           </div>
 
-          <div class="project">
+          <div class="fade-in project">
             <h3>project 2</h3>
             <div class="project_div"></div>
             <div class="btn">
@@ -88,7 +98,7 @@
             </div>
           </div>
 
-          <div class="project">
+          <div class="fade-in project">
             <h3>project 3</h3>
             <div class="project_div"></div>
             <div class="btn">
@@ -96,27 +106,27 @@
             </div>
           </div>
         </div>
-        
+
         <div class="btn">
           <a href="#" class="anchor">Visit</a>
         </div>
       </div>
     </section>
-    
+
     <!-- project section end -->
     <!-- about section start -->
-    
-    <section class="about">
+
+    <section class="about" id="about">
       <div class="section_heading">
         <h2>About me</h2>
       </div>
 
       <div class="container">
-        <div class="about_left">
+        <div class="slide-in about_left">
           <img src="./Images/who i am.jpg" alt="" />
         </div>
 
-        <div class="about_right">
+        <div class="slide-in about_right">
           <h4>SHAH HUSSAIN</h4>
           <p>
             Hello i am shah hussain. I have done my matriculation in computer
@@ -130,81 +140,160 @@
       </div>
     </section>
     <!-- about section end -->
-    
+
     <!-- contact section start -->
-    
-    <section class="contact">
-    
+
+    <section class="contact" id="contact">
       <div class="section_heading">
         <h2>Contact Me</h2>
       </div>
       <div class="container">
-      
-      <div class="contact_left">
-      
-        <div class="address">
-          <i class="bi bi-geo-alt-fill"></i>
-          <address>st-61a,block-10 gulshan-e-iqbal,karachi</address> 
-        </div>
-        
-        <div class="number">
-          
-          <address>+923491303137 <br> +923146085546</address>
-        </div>
-        
-        <div class="email">
-          <i class="far fa-envelope"></i>
-          <address>shahhussaint6@gmail.com</address>
-        </div>
-      
-      </div>
-      
-      <div class="contact_right">
-      
-      <form>
-        <div>
-          
-          <label for="name">Enter Your Name:</label>
-          <input type="text" id="name" placeholder="Enter your name">
-        
-        </div>
-            
-          <div>
-            <label for="email">Enter your Email:</label>
-            <input type="email" id="email" placeholder="Enter your email id">
-          
+        <div class="contact_left">
+          <div class="box">
+            <div class="icon">
+              <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <div class="text">
+              <h3>Address</h3>
+              <p>St-61a,block-10,<br />Gulshan-e-iqbal,karachi</p>
+            </div>
           </div>
-          
-          <div>
-          
-            <label for="phone">Contact number:</label>
-            <input type="tel" id="phone" name="phone" placeholder="123-45-678" required>
-    
+
+          <div class="box">
+            <div class="icon">
+              <i class="bi bi-telephone-fill"></i>
+            </div>
+            <div class="text">
+              <h3>phone</h3>
+              <p>(+92)349-1303137</p>
+            </div>
           </div>
-          
-          <div>
-            <label for="mesg">Enter your message:</label>
-          <textarea  name="mesg" id="mesg" cols="30" rows="10"></textarea>
-          
+
+          <div class="box">
+            <div class="icon">
+              <i class="bi bi-envelope"></i>
+            </div>
+            <div class="text">
+              <h3>Email</h3>
+              <p>shahhussaint6@gmail.com</p>
+              <p>shahhussaint256@yahoo.com</p>
+            </div>
           </div>
-        
-        <div>
-          <button type="submit">send</button>
-        
         </div>
-     
-      </form>
-      
-      
+
+        <div class="contact_right">
+          <form>
+            <h2>Send Message</h2>
+            <div class="inputBox">
+              <input type="text" id="name" required autocomplete="off" />
+              <span>Full Name</span>
+            </div>
+
+            <div class="inputBox">
+              <input type="text" id="email" required autocomplete="off" />
+              <span>Email</span>
+            </div>
+
+            <div class="inputBox">
+              <textarea name="message" id="message" required></textarea>
+              <span>Type your message...</span>
+            </div>
+
+            <div class="inputBox">
+              <input class="btn" type="submit" name="submitBtn" value="Send" />
+            </div>
+          </form>
+        </div>
       </div>
-      
-      </div>
-      
-    
     </section>
-    
-    
     <!-- contact section end -->
-    
+
+    <footer>
+      <div class="container">
+        <div class="sec aboutMe">
+          <h2>About me</h2>
+          <p>
+            Hello i am shah hussain. I have done my matriculation in computer
+            science in 2015 and Fsc in pre-enginnering in 2017 and currently
+            studuying in <strong>BSCS</strong> and i am in 4th semester.lots of
+            intrestet In.
+            <br />
+            <strong>&#x2022; Web development </strong>
+          </p>
+          <ul class="sci">
+            <li>
+              <a
+                href="https://www.youtube.com/channel/UCdurVg30mIlXKfXColrmBLA"
+                target="_blank"
+                ><i class="bi bi-youtube"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/shahhussain468/"
+                target="_blank"
+                ><i class="bi bi-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#"><i class="bi bi-twitter"></i></a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="https://web.facebook.com/shahhussaint123?_rdc=1&_rdr"
+                ><i class="bi bi-facebook"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="quikLinks">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="#hero">HOME</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#project">Mywork</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="sec contactInfo">
+          <h2>Contact Info</h2>
+
+          <ul class="info">
+            <li>
+              <span><i class="bi bi-geo-alt-fill"></i></span>
+              <span>St-61a,block-10,<br />Gulshan-e-iqbal,karachi</span>
+            </li>
+
+            <li>
+              <span>
+                <i class="bi bi-telephone-fill"></i>
+              </span>
+              <p>
+                <a href="#"> (+92)349-1303137 </a>
+                <br />
+                <a href="#"> (+92)3146085546 </a>
+              </p>
+            </li>
+
+            <li>
+              <span>
+                <i class="bi bi-envelope"></i>
+              </span>
+              <p>
+                <a href="#"> shahhussaint6@gmail.com </a>
+                <br />
+                <a href="#"> shahhussaint256@yahoo.com </a>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <div class="copyRightText">
+      <p>Copyright © 2021 Shahhussain. All right Resrved.</p>
+    </div>
   </body>
 </html>
