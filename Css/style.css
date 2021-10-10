@@ -873,6 +873,10 @@ footer .quikLinks ul li a:hover {
   .contact .contact_right {
     width: 130%;
   }
+  .about .about_right{
+    overflow-x: hidden;
+    
+  }
 }
 /* common screen size */
 /* 1300px */
